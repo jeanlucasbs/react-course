@@ -50,7 +50,8 @@ const MyForm = ({user}) => {
                 type="email" 
                 name="email" 
                 placeholder="Digite seu e-mail"
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => setEmail(e.target.value)} //onChange faz a manipulação de dado 
+                //pegando o envento de digitar e extraindo o valor do input após digitar
                 value={email} />
             </label>
 

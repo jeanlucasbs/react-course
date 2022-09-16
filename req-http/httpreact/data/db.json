@@ -1,19 +1,44 @@
 {
-    "products": [
-      {
-        "id": 1,
-        "name": "Camisa",
-        "price": 59.9
-      },
-      {
-        "id": 2,
-        "name": "Calça vermelha",
-        "price": 90
-      },
-      {
-        "id": 3,
-        "name": "Boné aba reta",
-        "price": 29.9
-      }
-    ]
-  }
+  "products": [
+    {
+      "id": 1,
+      "name": "Camisa",
+      "price": 59.9
+    },
+    {
+      "id": 2,
+      "name": "Calça vermelha",
+      "price": 90
+    },
+    {
+      "id": 3,
+      "name": "Boné aba reta",
+      "price": 29.9
+    },
+    {
+      "name": "Blusa azul",
+      "price": "16.00",
+      "id": 4
+    },
+    {
+      "name": "Blusa preta",
+      "price": "45.40",
+      "id": 5
+    },
+    {
+      "name": "Roupão branco",
+      "price": "50.99",
+      "id": 6
+    },
+    {
+      "name": "Cueva slim",
+      "price": "34.00",
+      "id": 7
+    },
+    {
+      "name": "asdas",
+      "price": "1232",
+      "id": 8
+    }
+  ]
+}
