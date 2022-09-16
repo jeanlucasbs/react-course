@@ -39,6 +39,11 @@
       "name": "asdas",
       "price": "1232",
       "id": 8
+    },
+    {
+      "name": "Blusa amarela",
+      "price": "10",
+      "id": 9
     }
   ]
 }

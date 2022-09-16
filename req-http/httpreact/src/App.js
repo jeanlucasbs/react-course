@@ -12,7 +12,7 @@ function App() {
   const [price, setPrice] = useState("");
 
   //4- custom
-  const {data: items} = useFetch(url);
+  const {data: items, httpConfig} = useFetch(url);
   
   
   //1- resgatando dados
@@ -37,19 +37,22 @@ function App() {
       price,
     };
 
-    const res = await fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(product)
-    });
+    // const res = await fetch(url, {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json"
+    //   },
+    //   body: JSON.stringify(product)
+    // });
     
-    //3- carregamento dinâmico
-    const addedProduct = await res.json();
+    // //3- carregamento dinâmico
+    // const addedProduct = await res.json();
 
-    //Utilziando o spread operator para pegar os dados antigos e add os novos dados
-    setProducts((prevProducts) => [...prevProducts, addedProduct])
+    // //Utilziando o spread operator para pegar os dados antigos e add os novos dados
+    // setProducts((prevProducts) => [...prevProducts, addedProduct])
+
+    //5- refatorando POST
+    httpConfig(product, "POST")
 
     //limpar os estados dos inputs após submter os dados
     setName("");
