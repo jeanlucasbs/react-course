@@ -13,18 +13,14 @@ function App() {
 
   //4- custom
   const {data: items, httpConfig} = useFetch(url);
-  
-  
+
   //1- resgatando dados
   // useEffect(() => {
   //   async function fetchData() {
   //     const res = await fetch(url);
-
   //     const data = await res.json();
-
   //     setProducts(data);
   //   }
-    
   //   fetchData();
   // }, []);
 
@@ -59,11 +55,19 @@ function App() {
     setPrice("");
   };
 
+  const handleDelete = (id) => {
+    httpConfig(id, "DELETE");
+  }
+
   return (
     <div className="App">
       <h1>Lista de Produtos</h1>
       {items && items.map((product) => (
-        <li key={product.id}>{product.name} - R${product.price}</li>
+        <li key={product.id}>
+          {product.name} - R${product.price}
+          <button onClick={() => handleDelete(product.id)}>Apagar</button>  
+        </li>
+          
       ))}
 
       <div className="add-product">
