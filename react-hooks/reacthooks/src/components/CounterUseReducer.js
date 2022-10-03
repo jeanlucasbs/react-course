@@ -32,14 +32,13 @@ export function CounterUseReducer() {
             <button onClick={() => dispatch({type: 'decrement'})}>-</button>
             <span>{state.count}</span>
             <button onClick={() => dispatch({type: 'increment'})}>+</button>
-            <br/>
-            <br/>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="custom_value">Valor personalizado: {customCounter} </label>
                 <br/>
                 <input type="number" id="custom_value" value={customCounter} onChange={(e) => setCostomCounter(e.target.value)} />
                 <button type="submit">Inserir</button>
             </form>
+            <hr/>
         </div>
     );
 };
